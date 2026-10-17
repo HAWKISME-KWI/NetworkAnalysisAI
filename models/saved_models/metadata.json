@@ -1,0 +1,20 @@
+{
+  "model_name": "XGBoost",
+  "threshold": 0.5,
+  "val_macro_f1_at_threshold": 0.9455539710443441,
+  "test_metrics_at_threshold": {
+    "threshold": 0.35000000000000003,
+    "macro_f1": 0.8669587930263394,
+    "attack_precision": 0.8251321219817364,
+    "attack_recall": 0.9746977852289773,
+    "roc_auc": 0.9806167739035251
+  },
+  "test_metrics_at_default": {
+    "threshold": 0.5,
+    "macro_f1": 0.8985438175801408,
+    "attack_precision": 0.8797424366312346,
+    "attack_recall": 0.9493735109856172,
+    "roc_auc": 0.9806167739035251
+  },
+  "threshold_note": "0.5 chosen for test reporting. Threshold 0.35 was overfit on validation due to distribution shift between val (from train) and test (separate capture). 0.35 gives higher recall but 25% false positive rate \u2014 unacceptable in production."
+}

@@ -1,0 +1,24 @@
+{
+  "task": "hierarchical_5class",
+  "stage1_threshold": 0.75,
+  "classes": [
+    "Backdoor",
+    "Exploitation",
+    "Generic",
+    "Reconnaissance"
+  ],
+  "mapping": {
+    "Exploits": "Exploitation",
+    "Fuzzers": "Exploitation",
+    "DoS": "Exploitation",
+    "Reconnaissance": "Reconnaissance",
+    "Analysis": "Reconnaissance",
+    "Backdoor": "Backdoor",
+    "Shellcode": "Backdoor",
+    "Worms": "Backdoor",
+    "Generic": "Generic"
+  },
+  "val_macro_f1": 0.7893007554008263,
+  "test_macro_f1": 0.7413954213155776,
+  "test_accuracy": 0.8832288782004567
+}

@@ -1,0 +1,24 @@
+{
+  "task": "hierarchical_6class_production",
+  "stage1_threshold": 0.5,
+  "conf_threshold": 0.8,
+  "coverage": 0.848151387066997,
+  "attack_coverage": 0.7452130945027795,
+  "selective_macro_f1": 0.7691551599628514,
+  "selective_accuracy": 0.8820421022483174,
+  "classes": [
+    "Normal",
+    "Backdoor",
+    "DoS",
+    "Exploitation",
+    "Generic",
+    "Reconnaissance"
+  ],
+  "per_class_coverage": {
+    "Backdoor": 0.29253731343283584,
+    "DoS": 0.17168011738811445,
+    "Exploitation": 0.6629638245899733,
+    "Generic": 0.9839436171903979,
+    "Reconnaissance": 0.6755331895518811
+  }
+}

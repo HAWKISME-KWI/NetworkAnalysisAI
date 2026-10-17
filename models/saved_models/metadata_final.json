@@ -1,0 +1,64 @@
+{
+  "architecture": "hierarchical_2stage",
+  "stage1_binary": {
+    "artifact": "model.pkl",
+    "threshold": 0.5,
+    "test_metrics": {
+      "macro_f1": 0.8985,
+      "accuracy": 0.8723,
+      "attack_precision": 0.8797,
+      "attack_recall": 0.9494,
+      "roc_auc": 0.9806
+    }
+  },
+  "stage2_multiclass": {
+    "artifact": "model_stage2_6class.pkl",
+    "label_encoder": "label_encoder_stage2_6class.pkl",
+    "classes": [
+      "Backdoor",
+      "DoS",
+      "Exploitation",
+      "Generic",
+      "Reconnaissance"
+    ],
+    "mapping": {
+      "Exploits": "Exploitation",
+      "Fuzzers": "Exploitation",
+      "DoS": "DoS",
+      "Reconnaissance": "Reconnaissance",
+      "Analysis": "Reconnaissance",
+      "Backdoor": "Backdoor",
+      "Shellcode": "Backdoor",
+      "Worms": "Backdoor",
+      "Generic": "Generic"
+    },
+    "confidence_threshold": 0.8
+  },
+  "production_config": {
+    "stage1_threshold": 0.5,
+    "confidence_threshold": 0.8,
+    "coverage": 0.848151387066997,
+    "attack_coverage": 0.7452130945027795,
+    "selective_macro_f1": 0.7691551599628514,
+    "selective_accuracy": 0.8820421022483174,
+    "per_class_coverage": {
+      "Backdoor": 0.29253731343283584,
+      "DoS": 0.17168011738811445,
+      "Exploitation": 0.6629638245899733,
+      "Generic": 0.9839436171903979,
+      "Reconnaissance": 0.6755331895518811
+    }
+  },
+  "unified_classes": [
+    "Normal",
+    "Backdoor",
+    "DoS",
+    "Exploitation",
+    "Generic",
+    "Reconnaissance"
+  ],
+  "notes": {
+    "DoS_low_coverage": "DoS coverage 17.2% \u2014 most DoS predictions fall below confidence 0.8 due to feature overlap with Exploitation. Flagged as 'Attack_Unknown' for SOC review.",
+    "backdoor_low_f1_raw": "Backdoor raw F1 0.29 on full test, rises to 0.65 when confidence-gated at 0.8."
+  }
+}

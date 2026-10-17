@@ -1,0 +1,46 @@
+{
+  "task": "hierarchical_2stage",
+  "stage1": {
+    "model_name": "XGBoost",
+    "artifact": "model.pkl",
+    "threshold": 0.7499999999999998
+  },
+  "stage2": {
+    "model_name": "XGBoost",
+    "artifact": "model_stage2.pkl",
+    "classes": [
+      "Backdoor",
+      "DoS",
+      "Exploitation",
+      "Generic",
+      "Reconnaissance"
+    ],
+    "n_classes": 5,
+    "weight_cap": 5.0,
+    "val_macro_f1_attack_only": 0.6957374248723154
+  },
+  "coarse_mapping": {
+    "Exploits": "Exploitation",
+    "Fuzzers": "Exploitation",
+    "Reconnaissance": "Reconnaissance",
+    "Analysis": "Reconnaissance",
+    "DoS": "DoS",
+    "Backdoor": "Backdoor",
+    "Shellcode": "Backdoor",
+    "Worms": "Backdoor",
+    "Generic": "Generic"
+  },
+  "unified_classes": [
+    "Normal",
+    "Backdoor",
+    "DoS",
+    "Exploitation",
+    "Generic",
+    "Reconnaissance"
+  ],
+  "test_end_to_end": {
+    "stage1_threshold": 0.7499999999999998,
+    "accuracy": 0.8292037118010008,
+    "macro_f1": 0.6748045423939472
+  }
+}
