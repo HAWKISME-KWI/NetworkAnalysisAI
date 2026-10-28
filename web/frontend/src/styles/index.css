@@ -1,0 +1,33 @@
+/* Splunk Enterprise Security Dark Theme Aesthetics */
+:root {
+    --bg-main: #0b0e14;
+    --bg-card: #141a24;
+    --bg-header: #1a2230;
+    --border-color: #2a364a;
+    --splunk-orange: #ff6900;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0b0e14;
+}
+::-webkit-scrollbar-thumb {
+    background: #2a364a;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff6900;
+}
